@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom To-Do List App</title>
+    <style>
+        * {
+            margin: 1;
+            font-family: "Fira Code", monospace;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,6 +29,7 @@
         <input type="text" id="taskInput" placeholder="Add a task">
         <button id="addTaskButton">Add Task</button>
         <h2>Current tasks</h2>
+        <button id="clearTasksButton">Clear All Tasks</button>
         <ul id="taskList"></ul>
 
     </div>
