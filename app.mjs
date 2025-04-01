@@ -13,13 +13,17 @@ addTaskButton.onclick = function () {
     const deleteButton = document.createElement("button");
     editButton.innerHTML = "Edit";
     deleteButton.innerHTML = "Delete";
+    editButton.onclick = function () {
+        const newTask = prompt("Edit task:", task);
+        task = newTask;
+        newContent.nodeValue = task;
+    };
+    deleteButton.onclick = function () {
+        taskList.removeChild(newListItem);
+    }
     newListItem.appendChild(newContent);
     newListItem.appendChild(checkbox);
     newListItem.appendChild(editButton);
     newListItem.appendChild(deleteButton);
     taskList.appendChild(newListItem);
-    saveTask();
 }
-
-
-loadCompletedTaskCheckboxState();
